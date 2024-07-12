@@ -1,7 +1,14 @@
 const mongoose = require("mongoose")
+require('dotenv').config();
+const databaseUrl = process.env.DATABASE_URL;
 
-mongoose.connect("mongodb+srv://deygobinda2808:0lwoATb5GeAnIv91@cluster0.iw5ieyd.mongodb.net/paytm")
+
+mongoose.connect(databaseUrl)
 .then(() =>{console.log("Conneted")})
+.catch((e)=>{
+    console.log(e)
+})
+
 
 
 const userSchma = mongoose.Schema({
