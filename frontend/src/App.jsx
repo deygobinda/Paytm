@@ -7,6 +7,7 @@ import { RecoilRoot, useRecoilState } from "recoil";
 import { isAuthenticated } from "./store/atoms";
 
 
+
 function AppWrapper() {
   const isAuth= useRecoilState(isAuthenticated);
   const navigate = useNavigate();
